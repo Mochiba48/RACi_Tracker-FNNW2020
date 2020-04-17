@@ -1,5 +1,7 @@
 import csv
 from tkinter import *
+import CSV
+
 # Erzeugung des Fensters
 tkFenster = Tk()
 tkFenster.title('RACi Tracker')
@@ -46,15 +48,26 @@ def buttonSpeichernClick():
     Beschreibung = TextBeschreibung.get('1.0', 'end').strip()
     Kategorie = str(entryKategorie.get())
     liste = [Benennung, Beschreibung, Kategorie]
-    aufgaben_listeexp(liste)
-    print(liste)
+    CSV.aufgaben_listeexp(liste)
+    #print(liste)
+    # Ereignisbehandlung
+    def buttonOkClick():
+        tkFensterBestätigen.quit()
+        tkFensterBestätigen.destroy()
+    # Neues Fenster öffnen
+    tkFensterBestätigen = Toplevel()
+    tkFensterBestätigen.title('Information')
+    tkFensterBestätigen.geometry('200x80')
+    # Label mit der Bestätigung
+    labelBestätigen = Label(master=tkFensterBestätigen,
+                        text='Aufgabe wurde gespeichert')
+    labelBestätigen.place(x=25, y=5, width=150, height=20)
+    # Button zum Schließen des Fensters
+    buttonOk = Button(master=tkFensterBestätigen, text='ok',
+                      command=buttonOkClick)
+    buttonOk.place(x=60, y=35, width=80, height=30)
 
 buttonSpeichern = Button(master=tkFenster, bg='#FBD975', text='Speichern', command=buttonSpeichernClick)
 buttonSpeichern.place(x=120, y=210, width=100, height=27)
-
-def aufgaben_listeexp(daten):
-    with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
-        aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        aufgaben_writer.writerow(daten)
 
 tkFenster.mainloop()

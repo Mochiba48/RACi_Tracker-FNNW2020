@@ -9,8 +9,6 @@ def aufgaben_listeinp(daten):
             print(line)
 
 
-daten = ["Simon", "Dani", "Kesh"]
-
 #in csv aufgabe exportieren:
 def aufgaben_listeexp(daten):
     with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
@@ -24,7 +22,7 @@ def aufgaben_listeexpkompl(daten):
         aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         aufgaben_writer.writerow(daten)
 
-aufgaben_listeinp(daten)
+
 
 
 
