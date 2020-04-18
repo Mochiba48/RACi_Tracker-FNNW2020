@@ -16,7 +16,7 @@ def aufgaben_listeexp(daten):
         aufgaben_writer.writerow(daten)
 
 
-#in csv alles exportieren (wird alles überschriben:
+#in csv alles exportieren (wird alles überschrieben):
 def aufgaben_listeexpkompl(daten):
     with open('Aufgaben.csv', mode='w', newline='') as aufgaben_file:
         aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
