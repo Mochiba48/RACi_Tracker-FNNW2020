@@ -3,14 +3,6 @@ from tkinter import *
 import CSV
 
 
-with open('Kategorie.csv', 'r') as csv_file:
-    csv_reader = csv.reader(csv_file)
-    daten = []
-    for line in csv_reader:
-        daten.append(line)
-    print(daten)
-
-
 # Erzeugung des Fensters
 tkFenster = Tk()
 tkFenster.title('Kategorien')
@@ -27,8 +19,12 @@ labelKategorie = Label(master=tkFenster, text='erfasste Kategorien')
 labelKategorie.place(x=0, y=40, width=200, height=27)
 # Listbox
 listboxKategorie = Listbox(master=tkFenster, selectmode='browse')
-for line in daten:
-    listboxKategorie.insert('end', line)
+with open('Kategorie.csv') as f:
+    reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    data = list(reader)
+for i in range(len(data)):
+    data1 = data[i]
+    listboxKategorie.insert('end',data1)
 listboxKategorie.place(x=5, y=65, width=190, height=100)
 # Scroolbar
 yScroll = Scrollbar(master=tkFenster, orient='vertical')
@@ -45,14 +41,19 @@ labelKategorie.place(x=220, y=40, width=100, height=27)
 entryKategorie = Entry(master=tkFenster, bg='white')
 entryKategorie.place(x=220, y=65, width=200, height=27)
 
+
 # Button zum erfassen
 def buttonSpeichernClick():
     # Übernahme der Daten
+
     eingabeKategorie = str(entryKategorie.get())
-    daten.append(eingabeKategorie)
-    print(daten)
-    listboxKategorie.insert('end', eingabeKategorie)
-    CSV.kategorie_listeexp(daten)
+    liste = [eingabeKategorie]
+    CSV.kategorie_listeexp(liste)
+    with open('Kategorie.csv') as f:
+        reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        data = list(reader)
+    dataneu = data[-1]
+    listboxKategorie.insert('end', dataneu)
     # Ereignisbehandlung
     def buttonOkClick():
         tkFensterBestätigen.destroy()

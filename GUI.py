@@ -39,8 +39,12 @@ labelKategorie = Label(master=tkFenster, text='Kategorie')
 labelKategorie.place(x=10, y=180, width=100, height=27)
 # Listbox
 listboxKategorie = Listbox(master=tkFenster, selectmode='browse')
-for i in kategorie:
-    listboxKategorie.insert('end', i)
+with open('Kategorie.csv') as f:
+    reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    data = list(reader)
+for i in range(len(data)):
+    data1 = data[i]
+    listboxKategorie.insert('end',data1)
 listboxKategorie.place(x=120, y=180, width=180, height=50)
 # Scroolbar
 yScroll = Scrollbar(master=tkFenster, orient='vertical')

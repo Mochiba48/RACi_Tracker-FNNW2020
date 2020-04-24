@@ -2,11 +2,10 @@ import csv
 
 
 #in csv aufgabe importieren:
-def aufgaben_listeinp(daten):
-    with open('Aufgaben.csv', 'r') as csv_file:
-        csv_reader = csv.reader(csv_file)
-        for line in csv_reader:
-            print(line)
+def aufgaben_listeinp(data):
+    with open('Aufgaben.csv') as f:
+        reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        data = list(reader)
 
 #in csv Kategorie importieren:
 def kategorie_listeinp(daten):
@@ -39,3 +38,6 @@ def aufgaben_listeexpkompl(daten):
 
 
 
+daten = ()
+aufgaben_listeinp(daten)
+print(daten)
