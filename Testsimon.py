@@ -1,29 +1,41 @@
-import datetime, time
-from tkinter import *
+import csv
+from datetime import time
+
+#in csv Kategorie importieren:
+
+differenzzeit = []
+
+def arbeitszeit(differenzzeit):
+    with open('Tracker.csv', 'r') as csv_file:
+        reader = csv.reader(csv_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        daten = list(reader)
+        print(daten)
+    #letzte erfassung
+    datenl = daten[-1]
+    #startzeit
+    datens = str(datenl[1])
+    neush = int(datens[0:2])
+    neusm = int(datens[3:5])
+    neuss = int(datens[6:8])
+    neulist = neush,neusm,neuss
+    print(neulist)
+    #endzeit
+    datens = str(datenl[-1])
+    neueh = int(datens[0:2])
+    neuem = int(datens[3:5])
+    neues = int(datens[6:8])
+    neulist = (neueh,neuem,neues)
+    print(neulist)
+    diffh = neueh - neush
+    print(diffh)
+    diffm = neuem - neusm
+    print(diffm)
+    diffs = neues - neuss
+    print(diffs)
+    differenzzeit = [str(time((diffh), (diffm), (diffs)))]
+    #print(differenzzeit)
 
 
-# Erzeugung des Fensters
-tkFenster = Tk()
-tkFenster.title('RACi Tracker')
-tkFenster.geometry('350x500')
-# Aktivierung des Fensters
+differenzzeit = arbeitszeit(differenzzeit)
 
-
-def buttonStart():
-    then = datetime.datetime.now() + datetime.timedelta(seconds=5)
-    while then > datetime.datetime.now():
-        print(time.strftime("%H:%M:%S"))
-        time.sleep(1)
-
-
-
-buttonStart = Button(master=tkFenster, bg='#FBD975', text='Start', command=buttonStart)
-buttonStart.place(x=120, y=140, width=80, height=27)
-
-
-tkFenster.mainloop()
-
-
-
-
-
+print(differenzzeit)

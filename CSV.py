@@ -29,6 +29,12 @@ def kategorie_listeexp(daten):
         kategorie_writer = csv.writer(kategorie_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         kategorie_writer.writerow(daten)
 
+#in csv Tracker exportieren:
+def tracker_listeexp(daten):
+    with open('Tracker.csv', mode='a', newline='') as tracker_file:
+        tracker_writer = csv.writer(tracker_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        tracker_writer.writerow(daten)
+
 
 #in csv alles exportieren (wird alles überschrieben):
 def aufgaben_listeexpkompl(daten):

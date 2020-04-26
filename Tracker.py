@@ -1,27 +1,41 @@
 import csv
 from tkinter import *
 import CSV
+from datetime import time
 import time
+import Testsimon
 
 startzeitliste = []
 endzeitliste = []
+aufgabetext = []
+differenzzeit = []
 
-def buttonVerarbeitenClick():
-    listeAusgewaehlt = listboxAufgaben.curselection()
-    itemAusgewaehlt = listeAusgewaehlt[0]
-    nameAusgewaehlt = listboxAufgaben.get(itemAusgewaehlt)
-    textBegruessung = nameAusgewaehlt
-    labelText.config(text=textBegruessung)
+def buttonStartClick():
+    listeAufgabe = listboxAufgaben.curselection()
+    itemAufgabe = listeAufgabe[0]
+    nameAufgabe = listboxAufgaben.get(itemAufgabe)
+    textAufgabe = nameAufgabe
+    aufgabetext.append(textAufgabe)
+    labelText.config(text=textAufgabe)
     startzeit = time.strftime("%H:%M:%S")
     labelzeit1.config(text=startzeit)
     startzeitliste.append(startzeit)
-    print(startzeitliste)
+    #print(startzeitliste)
 
 def buttonStoppenClick():
     endzeit = time.strftime("%H:%M:%S")
     labelzeit2.config(text=endzeit)
     endzeitliste.append(endzeit)
     print(endzeitliste)
+    zeit = [aufgabetext[-1], startzeitliste[-1], endzeitliste[-1]]
+    CSV.tracker_listeexp(zeit)
+    print(zeit)
+    differenzzeit1 = [Testsimon.arbeitszeit((differenzzeit))]
+    print(differenzzeit1)
+    #zeit = [aufgabetext[-1], startzeitliste[-1], endzeitliste[-1], differenzzeit1]
+    #print(zeit)
+
+
 
 
 # Erzeugung des Fensters
@@ -93,7 +107,7 @@ labelzeit2.place(x=140, y=270, width=100, height=27)
 
 
 # Button verarbeiten
-buttonVerarbeiten = Button(master=tkFenster1, text='Aufgabe starten', command=buttonVerarbeitenClick)
+buttonVerarbeiten = Button(master=tkFenster1, text='Aufgabe starten', command=buttonStartClick)
 buttonVerarbeiten.place(x=140, y=100, width=100, height=27)
 
 buttonStoppen = Button(master=tkFenster1, text='Aufgabe stoppen', command=buttonStoppenClick)
