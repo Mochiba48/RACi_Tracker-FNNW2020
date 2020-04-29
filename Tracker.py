@@ -3,12 +3,12 @@ from tkinter import *
 import CSV
 from datetime import time
 import time
-import Testsimon
 
 startzeitliste = []
 endzeitliste = []
 aufgabetext = []
-differenzzeit = []
+pause = []
+pausenzeit = []
 
 def buttonStartClick():
     listeAufgabe = listboxAufgaben.curselection()
@@ -22,20 +22,83 @@ def buttonStartClick():
     startzeitliste.append(startzeit)
     #print(startzeitliste)
 
+
+def buttonPauseClick():
+    startpauset = time.strftime("%H:%M:%S")
+    pause.append(startpauset)
+    #print(pause)
+    def buttonWeiterClick():
+        tkFensterBestätigen.destroy()
+        stopppauset = time.strftime("%H:%M:%S")
+        pause.append(stopppauset)
+        #print(pause)
+        # startzeit
+        datens = str(pause[0])
+        neush = int(datens[0:2])
+        neushs = neush * 3600
+        neusm = int(datens[3:5])
+        neusms = neusm * 60
+        neuss = int(datens[6:8])
+        neulist = neushs + neusms + neuss
+        # print(neulist)
+        # endzeit
+        datens = str(pause[-1])
+        neueh = int(datens[0:2])
+        neuehs = neueh * 3600
+        neuem = int(datens[3:5])
+        neuems = neuem * 60
+        neues = int(datens[6:8])
+        neulist1 = neuehs + neuems + neues
+        # print(neulist1)
+        pausenzeit.append(neulist1 - neulist)
+        #print(pausenzeit)
+    # Neues Fenster öffnen
+    tkFensterBestätigen = Toplevel()
+    tkFensterBestätigen.title('Information')
+    tkFensterBestätigen.geometry('200x80')
+    # Label mit der Bestätigung
+    labelBestätigen = Label(master=tkFensterBestätigen, text='Pause eingelegt')
+    labelBestätigen.place(x=25, y=5, width=150, height=20)
+    # Button zum Schließen des Fensters
+    buttonOk = Button(master=tkFensterBestätigen, text='Weiter',command=buttonWeiterClick)
+    buttonOk.place(x=60, y=35, width=80, height=30)
+
+
 def buttonStoppenClick():
     endzeit = time.strftime("%H:%M:%S")
     labelzeit2.config(text=endzeit)
     endzeitliste.append(endzeit)
-    print(endzeitliste)
+    #print(endzeitliste)
     zeit = [aufgabetext[-1], startzeitliste[-1], endzeitliste[-1]]
-    CSV.tracker_listeexp(zeit)
-    print(zeit)
-    differenzzeit1 = [Testsimon.arbeitszeit((differenzzeit))]
-    print(differenzzeit1)
-    #zeit = [aufgabetext[-1], startzeitliste[-1], endzeitliste[-1], differenzzeit1]
     #print(zeit)
 
-
+    # auswertung
+    datenl = zeit
+    # startzeit
+    datens = str(datenl[1])
+    neush = int(datens[0:2])
+    neushs = neush * 3600
+    neusm = int(datens[3:5])
+    neusms = neusm * 60
+    neuss = int(datens[6:8])
+    neulist = neushs + neusms + neuss
+    #print(neulist)
+    # endzeit
+    datens = str(datenl[-1])
+    neueh = int(datens[0:2])
+    neuehs = neueh * 3600
+    neuem = int(datens[3:5])
+    neuems = neuem * 60
+    neues = int(datens[6:8])
+    neulist1 = neuehs + neuems + neues
+    print(pausenzeit)
+    pausenzeit1 = int(pausenzeit[0])
+    diffs = neulist1 - neulist - pausenzeit1
+    print(diffs)
+    zeit.append(diffs)
+    print(zeit)
+    #auswertung in tracker.csv speichern
+    CSV.tracker_listeexp(zeit)
 
 
 # Erzeugung des Fensters
@@ -47,6 +110,7 @@ tkFenster1.geometry('400x500')
 #Titel anzeigen
 labeltitel = Label(master=tkFenster1, text='Tracking', fg='black', font=('Arial', 16))
 labeltitel.place(x=0, y=5, width=350, height=30)
+
 
 
 # Uhrzeit anzeigen
@@ -107,8 +171,11 @@ labelzeit2.place(x=140, y=270, width=100, height=27)
 
 
 # Button verarbeiten
-buttonVerarbeiten = Button(master=tkFenster1, text='Aufgabe starten', command=buttonStartClick)
-buttonVerarbeiten.place(x=140, y=100, width=100, height=27)
+buttonStarten = Button(master=tkFenster1, text='Aufgabe starten', command=buttonStartClick)
+buttonStarten.place(x=140, y=100, width=100, height=27)
+
+buttonPause = Button(master=tkFenster1, text='Pause', command=buttonPauseClick)
+buttonPause.place(x=140, y=240, width=100, height=27)
 
 buttonStoppen = Button(master=tkFenster1, text='Aufgabe stoppen', command=buttonStoppenClick)
 buttonStoppen.place(x=140, y=300, width=100, height=27)
