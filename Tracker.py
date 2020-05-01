@@ -8,7 +8,17 @@ startzeitliste = []
 endzeitliste = []
 aufgabetext = []
 pause = []
-pausenzeit = []
+pausenzeit = [0]
+
+# Erzeugung des Fensters
+tkFenster1 = Tk()
+tkFenster1.title('RACi Tracker')
+tkFenster1.geometry('400x500')
+# Aktivierung des Fensters
+
+#Titel anzeigen
+labeltitel = Label(master=tkFenster1, text='Tracking', fg='black', font=('Arial', 16))
+labeltitel.place(x=0, y=5, width=350, height=30)
 
 def buttonStartClick():
     listeAufgabe = listboxAufgaben.curselection()
@@ -92,24 +102,26 @@ def buttonStoppenClick():
     neues = int(datens[6:8])
     neulist1 = neuehs + neuems + neues
     print(pausenzeit)
-    pausenzeit1 = int(pausenzeit[0])
+    pausenzeit1 = int(pausenzeit[-1])
     diffs = neulist1 - neulist - pausenzeit1
     print(diffs)
     zeit.append(diffs)
     print(zeit)
     #auswertung in tracker.csv speichern
     CSV.tracker_listeexp(zeit)
+    if zeit[-1] < 60:
+        sec = zeit[-1]
+        labelText = Label(master=tkFenster1, text=('Es wurden', sec, 'Sekunden bei Aufgabe', zeit[0], 'verbucht.'))
+        labelText.place(x=0, y=330, width=400, height=27)
+    if zeit[-1] > 60 and zeit[-1] < 3600:
+        min = round(zeit[-1] / 60, 2)
+        labelText = Label(master=tkFenster1, text=('Es wurden', min, 'Minuten bei Aufgabe', zeit[0], 'verbucht.'))
+        labelText.place(x=0, y=330, width=400, height=27)
+    if zeit[-1] > 3600:
+        std = round(zeit[-1] / 3600, 2)
+        labelText = Label(master=tkFenster1, text=('Es wurden', std, 'Stunden bei Aufgabe', zeit[0], 'verbucht.'))
+        labelText.place(x=0, y=330, width=400, height=27)
 
-
-# Erzeugung des Fensters
-tkFenster1 = Tk()
-tkFenster1.title('RACi Tracker')
-tkFenster1.geometry('400x500')
-# Aktivierung des Fensters
-
-#Titel anzeigen
-labeltitel = Label(master=tkFenster1, text='Tracking', fg='black', font=('Arial', 16))
-labeltitel.place(x=0, y=5, width=350, height=30)
 
 
 
