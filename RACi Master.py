@@ -9,7 +9,7 @@ print("Hello RACi_Tracker Team")
 
 profiles = {} #dictionary mit Profilen
 profile = input("Profilname? ") # "ein Profil"
-profiles[profile] =
+profiles[profile] = "hello"
 
 print(profiles)
 # {'person': <User: "person">}

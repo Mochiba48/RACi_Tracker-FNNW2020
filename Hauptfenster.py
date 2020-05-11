@@ -39,6 +39,10 @@ filemenu.add_command(label="Beenden", command=root.destroy)
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d217587e23ebb9fef3b0e12be095d118328fbfa8
 buttonAufgaben = Button(master=root, text='Aufgabe erfassen', command=buttonAufgabenClick)
 buttonAufgaben.place(x=40, y=240, width=100, height=40)
 

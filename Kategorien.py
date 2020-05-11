@@ -2,7 +2,10 @@ import csv
 from tkinter import *
 import CSV
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d217587e23ebb9fef3b0e12be095d118328fbfa8
 def Kategorie():
     # Erzeugung des Fensters
     tkFenster = Tk()
