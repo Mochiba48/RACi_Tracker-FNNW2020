@@ -39,6 +39,7 @@ filemenu.add_command(label="Beenden", command=root.destroy)
 
 
 
+
 buttonAufgaben = Button(master=root, text='Aufgabe erfassen', command=buttonAufgabenClick)
 buttonAufgaben.place(x=40, y=240, width=100, height=40)
 
@@ -47,6 +48,8 @@ buttonAufgaben.place(x=200, y=240, width=100, height=40)
 
 buttonAufgaben = Button(master=root, text='Auswerten', command=buttonAuswertenClick)
 buttonAufgaben.place(x=360, y=240, width=100, height=40)
+
+
 
 
 root.mainloop()
