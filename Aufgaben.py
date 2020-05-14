@@ -116,17 +116,10 @@ def AufgabenErfassen():
             with open('Aufgaben.csv', 'w') as aufgaben_file:
                 aufgaben_writer = csv.writer(aufgaben_file)
                 for i in range(len(data)):
-                    aufgaben_writer.writerow(data[i])
-
-            print(data)
+                    CSV.aufgaben_listeexp(data[i])
             with open('Aufgaben.csv', 'r') as f:
                 reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 data = list(reader)
-
-
-            # with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
-            #     aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            #     aufgaben_writer.writerow(data)
 
             tkFensterBestätigen.destroy()
 
