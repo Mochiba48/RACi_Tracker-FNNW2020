@@ -2,13 +2,13 @@ import csv
 from tkinter import *
 from datetime import time
 import time
-import GUI
+import Aufgaben
 import Tracker
 import Kategorien
 
 
 def buttonAufgabenClick():
-    GUI.AufgabenErfassen()
+    Aufgaben.AufgabenErfassen()
 
 
 def buttonTrackenClick():
