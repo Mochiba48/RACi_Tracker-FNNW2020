@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef06b90b-9180-4bba-950f-227d1878dcea" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aufgaben.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auswertung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auswertung.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kategorie.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Kategorie.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testsimon.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testsimon.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tracker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker.csv" afterDir="false" />
-    </list>
+    <list default="true" id="ef06b90b-9180-4bba-950f-227d1878dcea" name="Default Changelist" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
