@@ -125,25 +125,6 @@ def TrackerStarten():
 
 
 
-
-    # Uhrzeit anzeigen
-    uhr = Label(master=tkFenster1)
-    uhr.place(x=140, y=150)
-
-    zeit = ''
-    # Abfrage der Zeit vom laufenden Computer
-    # mit config wird das Label neu beschriftet
-    # mit after wird nach 0,2sek die Funktion tick neu aufgerufen
-    def tick():
-        global zeit
-        neuezeit = time.strftime("%d.%m.%Y %H:%M")
-        if neuezeit != zeit:
-            zeit = neuezeit
-            uhr.config(text=zeit)
-        uhr.after(200, tick)
-
-
-
     #Aufgabe auswählen
     labelAufgaben = Label(master=tkFenster1, text='Aufgabe auswählen')
     labelAufgaben.place(x=10, y=40, width=120, height=27)
@@ -194,5 +175,5 @@ def TrackerStarten():
     buttonStoppen.place(x=140, y=300, width=100, height=27)
 
 
-    tick()
+
     tkFenster1.mainloop()
