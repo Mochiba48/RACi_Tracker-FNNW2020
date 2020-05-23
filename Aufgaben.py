@@ -83,11 +83,12 @@ def AufgabenErfassen():
         Kategorie = listboxKategorie.get(listboxKategorie.curselection())
         liste = [Benennung, Beschreibung, Kategorie]
         CSV.aufgaben_listeexp(liste)
-        print(liste)
         # Ereignisbehandlung
         def buttonOkClick():
             tkFensterBestätigen.quit()
             tkFensterBestätigen.destroy()
+            tkFenster.quit()
+            tkFenster.destroy()
         # Neues Fenster öffnen
         tkFensterBestätigen = Toplevel()
         tkFensterBestätigen.title('Information')
@@ -114,19 +115,17 @@ def AufgabenErfassen():
             data.remove(data[pointer])
 
             with open('Aufgaben.csv', 'w') as aufgaben_file:
-                aufgaben_writer = csv.writer(aufgaben_file)
-                for i in range(len(data)):
-                    aufgaben_writer.writerow(data[i])
+                aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                aufgaben_writer.writerow(data)
 
-            print(data)
             with open('Aufgaben.csv', 'r') as f:
                 reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 data = list(reader)
 
 
-            # with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
-            #     aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            #     aufgaben_writer.writerow(data)
+            with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
+                 aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                 aufgaben_writer.writerow(data)
 
             tkFensterBestätigen.destroy()
 
