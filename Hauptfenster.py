@@ -8,7 +8,7 @@ import Kategorien
 import AuswertungDatum
 import AuswertungAufgaben
 
-
+print("Test")
 def buttonAufgabenClick():
     Aufgaben.AufgabenErfassen()
 

@@ -43,7 +43,6 @@ def aufgaben_listeexpkompl(daten):
         aufgaben_writer.writerow(daten)
 
 
-
 daten = ()
 aufgaben_listeinp(daten)
 print(daten)

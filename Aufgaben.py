@@ -115,19 +115,22 @@ def AufgabenErfassen():
             data.remove(data[pointer])
 
             with open('Aufgaben.csv', 'w') as aufgaben_file:
-                aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                aufgaben_writer.writerow(data)
+                aufgaben_writer = csv.writer(aufgaben_file)
+                for i in range(len(data)):
+                    CSV.aufgaben_listeexp(data[i])
+
 
             with open('Aufgaben.csv', 'r') as f:
                 reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 data = list(reader)
-
-
-            with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
-                 aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                 aufgaben_writer.writerow(data)
+            #
+            #
+            # with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
+            #      aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            #      aufgaben_writer.writerow(data)
 
             tkFensterBestätigen.destroy()
+            tkFenster.destroy()
 
 
         def button2kClick():
