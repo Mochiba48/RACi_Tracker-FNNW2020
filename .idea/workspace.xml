@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef06b90b-9180-4bba-950f-227d1878dcea" name="Default Changelist" comment="test">
+    <list default="true" id="ef06b90b-9180-4bba-950f-227d1878dcea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Aufgaben.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hauptfenster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hauptfenster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kategorie.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Kategorie.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +43,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aUbQXflR2z9udZxe7eCWAL0Xtc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="RACi Master" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Hauptfenster">
+    <configuration name="Aufgaben" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RACi_Tracker-FNNW2020" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,7 +68,91 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RACi Master.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Aufgaben.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AuswertungAufgaben" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RACi_Tracker-FNNW2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AuswertungAufgaben.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AuswertungDatum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RACi_Tracker-FNNW2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AuswertungDatum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Hauptfenster" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RACi_Tracker-FNNW2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hauptfenster.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Testsimon" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RACi_Tracker-FNNW2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testsimon.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -71,7 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.RACi Master" />
+        <item itemvalue="Python.Hauptfenster" />
+        <item itemvalue="Python.Aufgaben" />
+        <item itemvalue="Python.AuswertungAufgaben" />
+        <item itemvalue="Python.AuswertungDatum" />
+        <item itemvalue="Python.Testsimon" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586880662558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1589999768026</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589999768026</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,14 +204,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
@@ -121,41 +226,79 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="502" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586801717427" />
-    <state width="1515" height="170" key="GridCell.Tab.0.bottom" timestamp="1587131917394">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="24" y="0" width="1234" height="680" key="CommitChangelistDialog2" timestamp="1590236388652">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="24" y="0" width="1234" height="680" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1590236388652" />
+    <state x="122" y="50" key="DiffContextDialog" timestamp="1589473572687">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="122" y="50" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1589473572687" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1589473146297">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589473146297" />
+    <state width="1259" height="172" key="GridCell.Tab.0.bottom" timestamp="1590236362182">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="172" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1515" height="170" key="GridCell.Tab.0.center" timestamp="1587131917394">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="949" height="229" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589436613149" />
+    <state width="1259" height="172" key="GridCell.Tab.0.center" timestamp="1590236362182">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="172" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1515" height="170" key="GridCell.Tab.0.left" timestamp="1587131917394">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="949" height="229" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589436613149" />
+    <state width="1259" height="172" key="GridCell.Tab.0.left" timestamp="1590236362182">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="172" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1515" height="170" key="GridCell.Tab.0.right" timestamp="1587131917394">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="949" height="229" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589436613149" />
+    <state width="1259" height="172" key="GridCell.Tab.0.right" timestamp="1590236362182">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="172" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1587131917388">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="949" height="229" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589436613149" />
+    <state width="1259" height="215" key="GridCell.Tab.1.bottom" timestamp="1590235349454">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="215" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590235349454" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587131917388" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1587131917388">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="347" key="GridCell.Tab.1.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589393243530" />
+    <state width="1259" height="215" key="GridCell.Tab.1.center" timestamp="1590235349454">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="215" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1590235349454" />
     <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587131917388" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1587131917388">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="347" key="GridCell.Tab.1.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589393243529" />
+    <state width="1259" height="215" key="GridCell.Tab.1.left" timestamp="1590235349454">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="215" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1590235349454" />
     <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587131917388" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1587131917388">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="347" key="GridCell.Tab.1.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589393243529" />
+    <state width="1259" height="215" key="GridCell.Tab.1.right" timestamp="1590235349454">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1259" height="215" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1590235349454" />
     <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587131917388" />
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588177297100">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="347" key="GridCell.Tab.1.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589393243530" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1589473353935">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588177297100" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1589473353935" />
+    <state x="482" y="269" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589473380175">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="482" y="269" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1589473380175" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587131881880" />
+    <state x="723" y="411" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589223349424" />
+    <state x="352" y="132" key="git4idea.merge.GitMergeDialog" timestamp="1589473339312">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="352" y="132" key="git4idea.merge.GitMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1589473339312" />
   </component>
 </project>
