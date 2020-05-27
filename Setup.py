@@ -3,9 +3,17 @@ import sys
 import tkinter
 from cx_Freeze import setup, Executable
 
+os.environ['TCL_LIBRARY'] = r'C:\Users\Acer\AppData\Local\Programs\Python\Python38\tcl\tcl8.6'
+os.environ['TK_LIBRARY'] = r'C:\Users\Acer\AppData\Local\Programs\Python\Python38\tcl\tk8.6'
+
 sys.argv.append("build")
 
-build_exe_options = {"packages": ["os"], "excludes": [tkinter], "include_files": ["RACI-Tracker.gif", "Aufgaben.csv", "Kategorie.csv", "Tracker.csv"]}
+
+
+build_exe_options = {"packages": ["os"], "excludes": [tkinter],
+                     "include_files": ["RACI-Tracker.gif", "Aufgaben.csv",
+                                       "Kategorie.csv", "Tracker.csv",
+                                       r'C:\Users\Acer\AppData\Local\Programs\Python\Python38\DLLs\tcl86t.dll', r'C:\Users\Acer\AppData\Local\Programs\Python\Python38\DLLs\tk86t.dll']}
 base = None
 if sys.platform == "win32":
     base = "Win32GUI"

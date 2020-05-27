@@ -1,9 +1,9 @@
 import csv
-# import Setup
-#
-# Setup.find_data_file("Aufgaben.csv")
-# Setup.find_data_file("Kategorie.csv")
-# Setup.find_data_file("Tracker.csv")
+import Setup
+
+Setup.find_data_file("Aufgaben.csv")
+Setup.find_data_file("Kategorie.csv")
+Setup.find_data_file("Tracker.csv")
 
 #more code...
 
