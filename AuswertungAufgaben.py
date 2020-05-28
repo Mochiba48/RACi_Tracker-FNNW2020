@@ -1,6 +1,6 @@
 import csv
 from tkinter import *
-import CSV
+import CSVintegrator
 
 def AufgabenAuswerten():
     Aufgabenwählen = []

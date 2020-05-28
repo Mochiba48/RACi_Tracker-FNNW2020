@@ -1,6 +1,6 @@
 import csv
 from tkinter import *
-import CSV
+import CSVintegrator
 
 
 def AufgabenErfassen():
@@ -82,7 +82,7 @@ def AufgabenErfassen():
         Beschreibung = TextBeschreibung.get('1.0', 'end').strip()
         Kategorie = listboxKategorie.get(listboxKategorie.curselection())
         liste = [Benennung, Beschreibung, Kategorie]
-        CSV.aufgaben_listeexp(liste)
+        CSVintegrator.aufgaben_listeexp(liste)
         # Ereignisbehandlung
         def buttonOkClick():
             tkFensterBestätigen.quit()
@@ -117,7 +117,7 @@ def AufgabenErfassen():
             with open('Aufgaben.csv', 'w') as aufgaben_file:
                 aufgaben_writer = csv.writer(aufgaben_file)
                 for i in range(len(data)):
-                    CSV.aufgaben_listeexp(data[i])
+                    CSVintegrator.aufgaben_listeexp(data[i])
 
 
             with open('Aufgaben.csv', 'r') as f:

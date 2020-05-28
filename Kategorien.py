@@ -1,6 +1,6 @@
 import csv
 from tkinter import *
-import CSV
+import CSVintegrator
 
 
 def Kategorie():
@@ -72,7 +72,7 @@ def Kategorie():
 
         eingabeKategorie = str(entryKategorie.get())
         liste = [eingabeKategorie]
-        CSV.kategorie_listeexp(liste)
+        CSVintegrator.kategorie_listeexp(liste)
         with open('Kategorie.csv') as f:
             reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             data = list(reader)
@@ -98,7 +98,7 @@ def Kategorie():
 
     # Button zum Löschen
     def buttonLöschenClick():
-        CSV.aufgaben_listeexp(liste)
+        CSVintegrator.aufgaben_listeexp(liste)
         with open('Kategorie.csv') as f:
             reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             data = list(reader)

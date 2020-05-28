@@ -1,6 +1,6 @@
 import csv
 from tkinter import *
-import CSV
+import CSVintegrator
 from datetime import time
 import time
 
@@ -109,7 +109,7 @@ def TrackerStarten():
         zeit.append(diffs)
         print(zeit)
         #auswertung in tracker.csv speichern
-        CSV.tracker_listeexp(zeit)
+        CSVintegrator.tracker_listeexp(zeit)
         if zeit[-1] < 60:
             sec = zeit[-1]
             labelText = Label(master=tkFenster1, text=('Es wurden', sec, 'Sekunden bei Aufgabe', zeit[0], 'verbucht.'))
