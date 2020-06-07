@@ -34,7 +34,6 @@ def AufgabenErfassen():
     TextBeschreibung.config(yscrollcommand=scrollbarBeschreibung.set)
     scrollbarBeschreibung.config(command=TextBeschreibung.yview)
 
-    kategorie = ["Simon", "Dani", "Kesh"]
 
     #Kategorie
     labelKategorie = Label(master=tkFenster, text='Kategorie')
@@ -63,7 +62,6 @@ def AufgabenErfassen():
     with open('Aufgaben.csv') as f:
         reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data = list(reader)
-        print(data)
     for i in range(len(data)):
         data1 = data[i]
         listboxAufgaben.insert('end',data1[0])
@@ -123,11 +121,6 @@ def AufgabenErfassen():
             with open('Aufgaben.csv', 'r') as f:
                 reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 data = list(reader)
-            #
-            #
-            # with open('Aufgaben.csv', mode='a', newline='') as aufgaben_file:
-            #      aufgaben_writer = csv.writer(aufgaben_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            #      aufgaben_writer.writerow(data)
 
             tkFensterBestätigen.destroy()
             tkFenster.destroy()

@@ -31,18 +31,16 @@ def TrackerStarten():
         startzeit = time.strftime("%d.%m.%Y %H:%M:%S")
         labelzeit1.config(text=startzeit)
         startzeitliste.append(startzeit)
-        #print(startzeitliste)
 
 
     def buttonPauseClick():
         startpauset = time.strftime("%H:%M:%S")
         pause.append(startpauset)
-        #print(pause)
+
         def buttonWeiterClick():
             tkFensterBestätigen.destroy()
             stopppauset = time.strftime("%H:%M:%S")
             pause.append(stopppauset)
-           #print(pause)
             # startzeit
             datens = str(pause[0])
             neush = int(datens[0:2])
@@ -51,7 +49,6 @@ def TrackerStarten():
             neusms = neusm * 60
             neuss = int(datens[6:8])
             neulist = neushs + neusms + neuss
-            # print(neulist)
             # endzeit
             datens = str(pause[-1])
             neueh = int(datens[0:2])
@@ -60,9 +57,7 @@ def TrackerStarten():
             neuems = neuem * 60
             neues = int(datens[6:8])
             neulist1 = neuehs + neuems + neues
-            # print(neulist1)
             pausenzeit.append(neulist1 - neulist)
-            #print(pausenzeit)
         # Neues Fenster öffnen
         tkFensterBestätigen = Toplevel()
         tkFensterBestätigen.title('Information')
@@ -79,9 +74,7 @@ def TrackerStarten():
         endzeit = time.strftime("%d.%m.%Y %H:%M:%S")
         labelzeit2.config(text=endzeit)
         endzeitliste.append(endzeit)
-        #print(endzeitliste)
         zeit = [aufgabetext[-1], startzeitliste[-1], endzeitliste[-1]]
-        #print(zeit)
 
         # auswertung
         datenl = zeit
@@ -93,7 +86,6 @@ def TrackerStarten():
         neusms = neusm * 60
         neuss = int(datens[17:19])
         neulist = neushs + neusms + neuss
-        #print(neulist)
         # endzeit
         datens = str(datenl[-1])
         neueh = int(datens[11:13])
@@ -102,12 +94,9 @@ def TrackerStarten():
         neuems = neuem * 60
         neues = int(datens[17:19])
         neulist1 = neuehs + neuems + neues
-        print(pausenzeit)
         pausenzeit1 = int(pausenzeit[-1])
         diffs = neulist1 - neulist - pausenzeit1
-        print(diffs)
         zeit.append(diffs)
-        print(zeit)
         #auswertung in tracker.csv speichern
         CSVintegrator.tracker_listeexp(zeit)
         if zeit[-1] < 60:
@@ -144,9 +133,6 @@ def TrackerStarten():
     listboxAufgaben.config(yscrollcommand=yScroll.set)
     yScroll.config(command=listboxAufgaben.yview)
 
-
-    # Kontrollvariable
-    text = StringVar()
 
     # Label ausgewählte Aufgabe
     labelausaufgabe = Label(master=tkFenster1, text='Ausgewählte Aufgabe')

@@ -1,4 +1,3 @@
-# import csv
 from tkinter import *
 from datetime import time
 import time
@@ -8,7 +7,6 @@ import Kategorien
 import AuswertungDatum
 import AuswertungAufgaben
 
-print("Test")
 def buttonAufgabenClick():
     Aufgaben.AufgabenErfassen()
 

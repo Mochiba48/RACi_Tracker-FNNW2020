@@ -18,6 +18,7 @@ def Kategorie():
     #Kategorie
     labelKategorie = Label(master=tkFenster, text='erfasste Kategorien')
     labelKategorie.place(x=0, y=40, width=200, height=27)
+
     # Listbox
     listboxKategorie = Listbox(master=tkFenster, selectmode='browse')
     with open('Kategorie.csv') as f:
@@ -27,28 +28,10 @@ def Kategorie():
         data1 = data[i]
         listboxKategorie.insert('end',data1)
     listboxKategorie.place(x=5, y=65, width=190, height=100)
+
     # Scroolbar
     yScroll = Scrollbar(master=tkFenster, orient='vertical')
     yScroll.place(x=190, y=65, width=10, height=100)
-    listboxKategorie.config(yscrollcommand=yScroll.set)
-    yScroll.config(command=listboxKategorie.yview)
-
-    #Aufgaben anzeigen
-    #Aufgaben
-    labelAufgaben = Label(master=tkFenster, text='erfasste Aufgaben')
-    labelAufgaben.place(x=0, y=275, width=200, height=27)
-    #Aufgabenbox
-    listboxAufgaben = Listbox(master=tkFenster, selectmode='browse')
-    with open('Aufgaben.csv') as f:
-        reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        data = list(reader)
-    for i in range(len(data)):
-        data1 = data[i]
-        listboxAufgaben.insert('end',data1)
-    listboxAufgaben.place(x=5, y=275, width=190, height=100)
-    #Scrollbar
-    yScroll = Scrollbar(master=tkFenster, orient='vertical')
-    yScroll.place(x=190, y=275, width=10, height=100)
     listboxKategorie.config(yscrollcommand=yScroll.set)
     yScroll.config(command=listboxKategorie.yview)
 
@@ -61,9 +44,6 @@ def Kategorie():
     # Entry
     entryKategorie = Entry(master=tkFenster, bg='white')
     entryKategorie.place(x=220, y=65, width=200, height=27)
-
-    #Kategorie Löschen
-
 
 
     # Button zum erfassen
@@ -95,15 +75,5 @@ def Kategorie():
 
     buttonSpeichern = Button(master=tkFenster, bg='#FBD975', text='Kategorie erfassen', command=buttonSpeichernClick)
     buttonSpeichern.place(x=220, y=100, width=100, height=27)
-
-    # Button zum Löschen
-    def buttonLöschenClick():
-        CSVintegrator.aufgaben_listeexp(liste)
-        with open('Kategorie.csv') as f:
-            reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            data = list(reader)
-
-
-    #
 
     tkFenster.mainloop()

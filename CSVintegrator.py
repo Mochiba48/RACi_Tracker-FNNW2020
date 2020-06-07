@@ -19,8 +19,6 @@ find_data_file("Kategorie.csv")
 find_data_file("Tracker.csv")
 
 
-# more code...
-
 # in csv aufgabe importieren:
 def aufgaben_listeinp(data):
     with open('Aufgaben.csv') as f:
