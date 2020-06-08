@@ -43,8 +43,8 @@ def AufgabenErfassen():
     with open('Kategorie.csv') as f:
         reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data = list(reader)
-    for i in range(len(data)):
-        data1 = data[i]
+    for i in range(len(data)-1):
+        data1 = data[i+1]
         listboxKategorie.insert('end',data1)
     listboxKategorie.place(x=120, y=180, width=180, height=50)
     # Scroolbar
@@ -62,8 +62,8 @@ def AufgabenErfassen():
     with open('Aufgaben.csv') as f:
         reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data = list(reader)
-    for i in range(len(data)):
-        data1 = data[i]
+    for i in range(len(data)-1):
+        data1 = data[i+1]
         listboxAufgaben.insert('end',data1[0])
     listboxAufgaben.place(x=120, y=275, width=190, height=100)
     #Scrollbar

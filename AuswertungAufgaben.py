@@ -18,8 +18,8 @@ def AufgabenAuswerten():
         with open('Tracker.csv') as f:
             reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             track = list(reader)
-        for i in range(len(track)):
-            track1 = track[i]
+        for i in range(len(track)-1):
+            track1 = track[i+1]
             track2 = track1[0]
             data3.append(track1)
         listeAufgabe = listboxAusauf.curselection()
@@ -89,8 +89,8 @@ def AufgabenAuswerten():
     with open('Aufgaben.csv') as f:
         reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data = list(reader)
-    for i in range(len(data)):
-        data1 = data[i]
+    for i in range(len(data)-1):
+        data1 = data[i+1]
         spezaufgabe.append(data1)
         data2 = data1[0]
         listboxAusauf.insert('end', data2)

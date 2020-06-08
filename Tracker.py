@@ -122,8 +122,8 @@ def TrackerStarten():
     with open('Aufgaben.csv') as f:
         reader =csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         data = list(reader)
-    for i in range(len(data)):
-        data1 = data[i]
+    for i in range(len(data)-1):
+        data1 = data[i+1]
         data2 = data1[0]
         listboxAufgaben.insert('end',data2)
     listboxAufgaben.place(x=140, y=40, width=180, height=50)

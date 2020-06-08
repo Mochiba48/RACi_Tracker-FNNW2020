@@ -21,8 +21,8 @@ def Zeitauswertung():
     with open('Tracker.csv') as f:
         reader = csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         track = list(reader)
-    for i in range(len(track)):
-        track1 = track[i]
+    for i in range(len(track)-1):
+        track1 = track[i+1]
         track2 = track1[0]
         data3.append(track1)
 

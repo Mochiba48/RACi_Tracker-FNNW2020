@@ -23,17 +23,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Aufgaben.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Aufgaben.py" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Aufgaben_Profile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSVintegrator.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSVintegrator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuswertungAufgaben.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuswertungAufgaben.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuswertungDatum.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuswertungDatum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kategorie.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Kategorie.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kategorien.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kategorien.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RACI-Tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/RACI-Tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/Setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tracker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tracker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Aufgaben.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Aufgaben.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Kategorie.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Kategorie.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Tracker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/exe.win-amd64-3.8/Tracker.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/exe.win-amd64-3.8/lib/library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/exe.win-amd64-3.8/lib/library.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="RunManager" selected="Python.RACI-Tracker (1)">
-    <configuration name="CSVintegrator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Aufgaben" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RACi_Tracker-FNNW2020" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Acer\Documents\GitHub\RACi_Tracker-FNNW2020\CSVintegrator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Aufgaben.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,10 +171,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.RACI-Tracker (1)" />
+        <item itemvalue="Python.Setup" />
+        <item itemvalue="Python.Aufgaben" />
         <item itemvalue="Python.Kategorien" />
         <item itemvalue="Python.RACI-Tracker" />
-        <item itemvalue="Python.CSVintegrator" />
-        <item itemvalue="Python.Setup" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590695839865</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final Program">
+      <created>1591534061466</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591534061466</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,30 +295,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589473146297" />
-    <state width="1899" height="184" key="GridCell.Tab.0.bottom" timestamp="1591529258379">
+    <state width="1899" height="184" key="GridCell.Tab.0.bottom" timestamp="1591611685065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="172" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1899" height="184" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591529258379" />
-    <state width="1899" height="184" key="GridCell.Tab.0.center" timestamp="1591529258379">
+    <state width="1899" height="184" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591611685065" />
+    <state width="1899" height="184" key="GridCell.Tab.0.center" timestamp="1591611685065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="172" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1899" height="184" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591529258379" />
-    <state width="1899" height="184" key="GridCell.Tab.0.left" timestamp="1591529258379">
+    <state width="1899" height="184" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591611685065" />
+    <state width="1899" height="184" key="GridCell.Tab.0.left" timestamp="1591611685065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="172" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1899" height="184" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591529258379" />
-    <state width="1899" height="184" key="GridCell.Tab.0.right" timestamp="1591529258379">
+    <state width="1899" height="184" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591611685065" />
+    <state width="1899" height="184" key="GridCell.Tab.0.right" timestamp="1591611685065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="172" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590236362182" />
     <state width="1515" height="170" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587131917394" />
-    <state width="1899" height="184" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591529258379" />
+    <state width="1899" height="184" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1591611685065" />
     <state width="1259" height="215" key="GridCell.Tab.1.bottom" timestamp="1590235349454">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
